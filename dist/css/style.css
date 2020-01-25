@@ -1,0 +1,236 @@
+/* basic style */
+html,
+body
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body
+{
+    display: flex;
+
+    background-color: #1c2026;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* menu style */
+.menu
+{
+    width: calc(54px * 4 + 30px * 3);
+    height: 54px;
+    margin: 0 auto;
+
+    -webkit-filter: url('#goo');
+            filter: url('#goo');
+}
+
+ul
+{
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+li
+{
+    width: 54px;
+    height: 54px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+svg
+{
+    overflow: hidden;
+}
+
+.ico01
+{
+    position: relative;
+    z-index: 4;
+
+    background-color: #d92567;
+}
+
+.ico02
+{
+    z-index: 3;
+
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1), -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1);
+
+    background-color: #d91e85;
+}
+
+.ico03
+{
+    z-index: 2;
+
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s, -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+
+    background-color: #f24405;
+}
+
+.ico04
+{
+    z-index: 1;
+
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s, -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+
+    background-color: #f23030;
+}
+
+.move-ico
+{
+    position: absolute;
+    top: 0;
+}
+
+.active .ico02
+{
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s, -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .8s;
+    -webkit-transform: translateX(calc(54px + 30px));
+            transform: translateX(calc(54px + 30px));
+}
+
+.active .ico03
+{
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s, -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1) .4s;
+    -webkit-transform: translateX(calc(54px * 2 + 30px * 2));
+            transform: translateX(calc(54px * 2 + 30px * 2));
+}
+
+.active .ico04
+{
+    transition: -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform 1.2s cubic-bezier(.77, 0, .175, 1), -webkit-transform 1.2s cubic-bezier(.77, 0, .175, 1);
+    -webkit-transform: translateX(calc(54px * 3 + 30px * 3));
+            transform: translateX(calc(54px * 3 + 30px * 3));
+}
+
+/* menu-object style */
+.menu-object
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: calc(54px * 4 + 30px * 3);
+    height: 54px;
+    margin: auto;
+}
+
+.menu-object .ico01::before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+    height: 24px;
+    margin: auto;
+
+    content: '';
+    transition: -webkit-transform .8s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform .8s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform .8s cubic-bezier(.77, 0, .175, 1), -webkit-transform .8s cubic-bezier(.77, 0, .175, 1);
+
+    background-color: #fff;
+}
+
+.menu-object .ico01::after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 24px;
+    height: 4px;
+    margin: auto;
+
+    content: '';
+    transition: -webkit-transform .8s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform .8s cubic-bezier(.77, 0, .175, 1);
+    transition:         transform .8s cubic-bezier(.77, 0, .175, 1), -webkit-transform .8s cubic-bezier(.77, 0, .175, 1);
+
+    background-color: #fff;
+}
+
+.menu-object .link
+{
+    line-height: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+}
+
+.menu-object .link i
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+}
+
+.menu-object .link01
+{
+    font-size: 26px;
+}
+
+.menu-object .link02
+{
+    font-size: 30px;
+}
+
+.menu-object .link03
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.active .menu-object .ico01::before
+{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.active .menu-object .ico01::after
+{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
