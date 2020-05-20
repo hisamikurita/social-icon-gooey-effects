@@ -4,5 +4,14 @@
 
 ![スクリーンショット (124)](https://user-images.githubusercontent.com/47776346/73117843-e5b56e00-3f8e-11ea-85d4-9da84f03612b.png)
 
-Referenced by<br>
+## Usage
+* Clone repository<br>
+* Install Node.js<br>
+* Run following commands<br>
+```
+  npm install  
+  npx gulp  
+```
+
+## Reference
 http://tympanus.net/codrops/2015/03/10/creative-gooey-effects/
